@@ -1,0 +1,38 @@
+{
+  "name": "httpd-spa",
+  "version": "0.0.0",
+  "description": "httpd-spa",
+  "repository": "attrs/httpd-spa",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "node bin/httpd-spa.js serve examples -a '0.0.0.0' -p 9000 -i index.html -d spa.html -n notfound.html -c --cors -s -f dev -v"
+  },
+  "bin": {
+    "httpd-spa": "bin/httpd-spa.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.17.1",
+    "compression": "^1.7.3",
+    "connect": "^3.6.6",
+    "connect-static-file": "^2.0.0",
+    "fs-extra": "^7.0.0",
+    "isbot": "^2.2.0",
+    "minimatch": "^3.0.4",
+    "morgan": "^1.9.0",
+    "opener": "^1.5.0",
+    "phantom": "^6.0.3",
+    "serve-static": "^1.13.2",
+    "sha256": "^0.2.0",
+    "untildify": "^3.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "README.md"
+  ]
+}
