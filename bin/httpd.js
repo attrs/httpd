@@ -28,7 +28,7 @@ commander
   .option('-v, --verborse', 'verbose output')
   .option('-s, --pseudopages [pattern]', 'pseudo page glob patterns for single page application (default is a file without an extension)')
   .option('-d, --defaultpage <pagename>', 'default page for pseudo page')
-  .option('-c, --capture [pattern]', 'turn on live page capture (server-side rendering with phantomjs), pattern=bot,bot/oldie,regexp(user-agent)')
+  // .option('-c, --capture [pattern]', 'turn on live page capture (server-side rendering with phantomjs), pattern=bot,bot/oldie,regexp(user-agent)')
   .option('-i, --indexpage <pagename>', 'index page')
   .option('-n, --notfound <filename>', 'not found page')
   .option('-f, --logformat <format>', 'log format, dev(default),combind,common,tiny,short (see https://www.npmjs.com/package/morgan)')

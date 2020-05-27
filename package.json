@@ -1,15 +1,15 @@
 {
-  "name": "httpd-spa",
-  "version": "0.0.0",
-  "description": "httpd-spa",
-  "repository": "attrs/httpd-spa",
+  "name": "@attrs/httpd",
+  "version": "0.1.0",
+  "description": "httpd for single page applications",
+  "repository": "attrs/httpd",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
-    "dev": "node bin/httpd-spa.js serve examples -a '0.0.0.0' -p 9000 -i index.html -d spa.html -n notfound.html -c --cors -s -f dev -v"
+    "dev": "node bin/httpd serve examples -a '0.0.0.0' -p 9001 -i index.html -d spa.html -n notfound.html --cors -s -f dev -v"
   },
   "bin": {
-    "httpd-spa": "bin/httpd-spa.js"
+    "httpd": "bin/httpd.js"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -22,7 +22,6 @@
     "minimatch": "^3.0.4",
     "morgan": "^1.9.0",
     "opener": "^1.5.0",
-    "phantom": "^6.0.3",
     "serve-static": "^1.13.2",
     "sha256": "^0.2.0",
     "untildify": "^3.0.3"
