@@ -25,7 +25,7 @@ commander
   .description('Start Server')
   .option('-a, --address <address>', 'bind address')
   .option('-p, --port <portnumber>', 'port', parseInt)
-  .option('-v, --verborse', 'verbose output')
+  .option('-g, --verbose', 'verbose output')
   .option('-s, --pseudopages [pattern]', 'pseudo page glob patterns for single page application (default is a file without an extension)')
   .option('-d, --defaultpage <pagename>', 'default page for pseudo page')
   // .option('-c, --capture [pattern]', 'turn on live page capture (server-side rendering with phantomjs), pattern=bot,bot/oldie,regexp(user-agent)')
@@ -45,7 +45,7 @@ commander
       pseudopages: options.pseudopages,
       defaultpage: options.defaultpage,
       capture: options.capture,
-      verborse: options.verborse,
+      verbose: options.verbose,
       indexpage: options.indexpage,
       notfound: options.notfound,
       logformat: options.logformat,
@@ -58,7 +58,7 @@ commander
 
     //console.log(o);
 
-    if( options.verbose ) console.log(chalk.blue(o));
+    if( options.verbose ) console.log(chalk.blue('options:', JSON.stringify(o, null, 2)));
 
     (async () => {
       try {
@@ -66,7 +66,7 @@ commander
         const httpd = await server.listen();
         const address = httpd.address();
 
-        console.log(chalk.blue(`${pkg.name} listening on`), chalk.white.bold(`${address.address}:${address.port}`));
+        console.log(chalk.blue('httpd listening on'), chalk.white.bold(`${address.address}:${address.port}`));
         if( options.open ) opener(server.connecturl);
       } catch(err) {
         error(err);
