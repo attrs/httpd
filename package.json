@@ -1,6 +1,6 @@
 {
   "name": "@attrs/httpd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "httpd for single page applications",
   "repository": "attrs/httpd",
   "license": "MIT",
